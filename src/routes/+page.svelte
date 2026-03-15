@@ -6,6 +6,7 @@
         color: darkgoldenrod;
         align-items: center;
         size: 16;
+    
         
     }
 
