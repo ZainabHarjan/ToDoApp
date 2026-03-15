@@ -25,6 +25,8 @@
   "devDependencies": {
     "@sveltejs/kit": "^2.55.0",
     "svelte": "^5.53.12",
-    "typescript": "^5.9.3"
-  }
+    "typescript": "^5.9.3",
+    "@types/bun": "latest"
+  },
+  "private": true
 }
