@@ -7,7 +7,6 @@
         align-items: center;
         size: 16;
     
-        
     }
 
 
@@ -39,6 +38,10 @@
         border-color: #fef9ff;
         border-width: 5px;
         
+    }
+
+    button {
+        padding: 25px 50px 75px 100px;
     }
 
 </style>
