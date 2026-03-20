@@ -2,11 +2,10 @@
 
 <style>
    p {
-        font-family: fantasy;
-        color: darkgoldenrod;
-        align-items: center;
-        size: 16;
-    
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        color: #fef9ff;
+        font-size: 18px;
+        font-weight: bolder;
     }
 
 
@@ -41,16 +40,21 @@
     }
 
     button {
-        padding: 25px 50px 75px 100px;
+       margin: 75px 0px 25px 500px; 
+       background-color: #ff9782;
+       width: 70px;
+       height: 45px;
+       border-color: #fef9ff;
     }
 
 </style>
 
 <body>
-
     <center>
         <div> 
-            <button>add task</button>
+            <button>
+                <p>ADD TASK!</p>
+            </button>
         </div> 
     </center>     
 </body>
