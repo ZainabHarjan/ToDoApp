@@ -1,5 +1,6 @@
 <center><h1>Welcome to my very kind and cute ToDo Appi!</h1></center>
 
+
 <style>
    p {
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -50,14 +51,24 @@
 </style>
 
 <body>
-    <center>
-        <div> 
-            <button>
-                <p>ADD TASK!</p>
-            </button>
-        </div> 
-    </center>     
+        <center>
+            <div> 
+                <button on:click={addTask}>
+                    <p>ADD TASK!</p>
+                </button>
+                <h1>count: {count}</h1>
+            </div> 
+        </center>  
 </body>
+
+<script defer>
+
+ let count = 0;
+
+    function addTask () {
+        count += 1;
+    }
+</script>
 
 
 
