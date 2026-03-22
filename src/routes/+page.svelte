@@ -3,7 +3,7 @@
 
 <style>
    p {
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-family: cursive;
         color: #fef9ff;
         font-size: 18px;
         font-weight: bolder;
@@ -26,11 +26,17 @@
 
     }
 
-    body {
+    .background-div {
+        position: fixed; /* Fixes the div to the viewport, even on scroll */
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1; /* Pushes the div behind all other content */
         background-image: url(/flowers.jpg);
     }
 
-    div {
+    .div-regular {
         background-color: #ffb5a7;
         width: 800px;
         height: 1000px;
@@ -45,30 +51,66 @@
        background-color: #ff9782;
        width: 70px;
        height: 45px;
+       border-style: inset;
        border-color: #fef9ff;
+       border-width: 5px;
+       text-decoration: none;
+  /* Centers text horizontally */
+        text-align: center;
     }
 
+    input {
+        background-color: #ff9782;
+        border-style: inset;
+        border-color: #fef9ff;
+        border-width: 5px;
+        width: 200px;
+        height: 25px;
+        font-family: cursive;
+        color: #fef9ff;
+        font-size: large;
+    }
+
+    .box {
+        border-style: inset;
+       border-color: #fef9ff;
+       border-width: 5px;
+       font-family: cursive;
+       color: #fef9ff;
+       font-size: large;
+       padding: 25px 200px 25px 200px;
+       text-align: right;
+       align-items: right;
+    }
 </style>
 
-<body>
-        <center>
-            <div> 
-                <button on:click={addTask}>
-                    <p>ADD TASK!</p>
-                </button>
-                <h1>count: {count}</h1>
-            </div> 
-        </center>  
-</body>
+<script>
 
-<script defer>
-
- let count = 0;
+    let count = $state(0);
+    let task = $state();
 
     function addTask () {
+        console.log('hi')
         count += 1;
     }
 </script>
+
+<div class="background-div">
+</div> 
+<center>
+    <div class="div-regular"> 
+        <input bind:value={task} placeholder="input task here"/>
+        <button onclick={addTask}>
+            <p>add task</p>
+        </button>
+            <h1>Task: {task}</h1>
+            <box class='box'>this is my beautiful bountiful box</box>
+    </div> 
+    
+    
+</center>  
+
+
 
 
 
